@@ -1,0 +1,52 @@
+<template lang="pug">
+#functionchange
+    .functionList
+        i.material-icons list
+        i.material-icons assessment
+        i.material-icons library_music
+    .productName POMODORO
+</template>
+
+<script>
+export default {
+  name: 'functionList',
+  data () {
+    return {}
+  },
+  methods: {}
+}
+</script>
+
+<style lang="scss">
+@import "@/styles/_function.scss";
+
+.functionList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include size(30px, 220px);
+  // border: solid 1px #f24;
+
+  position: absolute;
+  right: 85px;
+  top: 48px;
+  .material-icons {
+    font-size: 36px;
+  }
+}
+
+.productName {
+  font-family: Futura;
+  font-weight: bold;
+  font-size: 24px;
+  color: $color_white;
+  // border: solid 1px #f24;s
+
+  transform: rotate(90deg);
+  transform-origin: top right;
+
+  position: absolute;
+  right: 85px;
+  bottom: 48px;
+}
+</style>

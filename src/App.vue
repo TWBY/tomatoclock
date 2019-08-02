@@ -1,29 +1,49 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+html
+  head
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    title Document
+  body
+    Home(@breakStauting="status")
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Home from '@/views/Home.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Home
   }
+}
+</script>
+
+<style lang="scss">
+@import "@/styles/_function.scss";
+
+* {
+  position: relative;
+}
+
+html,
+body {
+  @include size(100%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+}
+
+#listClock {
+  @include size(830px, 800px);
+  background-color: $color_red_light;
+}
+#functionchange {
+  @include size(450px, 800px);
+  background-color: $color_blue_darken;
 }
 </style>

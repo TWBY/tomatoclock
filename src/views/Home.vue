@@ -1,18 +1,37 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  div#app
+    div#listClock
+      todolist
+      pomodoroClock(@breakStauting="status")
+    div#functionchange
+      functionchange
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import todolist from '@/components/todolist.vue'
+import pomodoroClock from '@/components/pomodoroClock.vue'
+import functionchange from '@/components/functionchange.vue'
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
-    HelloWorld
+    todolist,
+    pomodoroClock,
+    functionchange
+  },
+  data () {
+    return {
+      breakstatus: null
+      // breakStatus: app.breakStatus
+    }
+  },
+  methods: {
+    status: function (statusing) {
+      this.breakstatus = statusing
+    }
   }
 }
 </script>
+
+<style lang="scss">
+</style>
