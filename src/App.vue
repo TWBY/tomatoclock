@@ -4,7 +4,12 @@ html
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
     title Document
   body
-    Home(@breakStauting="status")
+    //- Home
+    #sideBar
+      router-link(to='/') Home
+      | |
+      router-link(to='/list') List
+    router-view
 </template>
 
 <script>
@@ -19,31 +24,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/_function.scss";
-
-* {
-  position: relative;
-}
-
-html,
-body {
-  @include size(100%, 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-#app {
-  display: flex;
-}
-
-#listClock {
-  @include size(830px, 800px);
-  background-color: $color_red_light;
-}
-#functionchange {
-  @include size(450px, 800px);
-  background-color: $color_blue_darken;
-}
+@import "@/styles/app.scss";
 </style>

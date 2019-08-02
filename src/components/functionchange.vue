@@ -18,35 +18,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/_function.scss";
-
-.functionList {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  @include size(30px, 220px);
-  // border: solid 1px #f24;
-
-  position: absolute;
-  right: 85px;
-  top: 48px;
-  .material-icons {
-    font-size: 36px;
-  }
-}
-
-.productName {
-  font-family: Futura;
-  font-weight: bold;
-  font-size: 24px;
-  color: $color_white;
-  // border: solid 1px #f24;s
-
-  transform: rotate(90deg);
-  transform-origin: top right;
-
-  position: absolute;
-  right: 85px;
-  bottom: 48px;
-}
+@import "@/styles/functionChange.scss";
 </style>
