@@ -28,6 +28,7 @@
             font-size: 16px;
             padding-left: 16px;
         }
+
     }
 
     .add {
@@ -40,6 +41,21 @@
         // border: solid 1px black;
     }
 }
+
+.breakTime_color {
+    input {
+        &::-webkit-input-placeholder {
+            color: $color_blue_middle;
+            transition-duration: $transition_time;
+        }
+    }
+
+    .add {
+        color: $color_blue_middle;
+        transition-duration: $transition_time;
+    }
+}
+
 
 .task {
     @include size(445px, 114.5px);
@@ -102,6 +118,7 @@
 
                 @include size(445px, 1px);
             }
+
         }
 
         .material-icons {
@@ -111,14 +128,6 @@
             position: absolute;
         }
 
-        .breakTime_bg {
-            background-color: $color_blue_middle;
-            transition-duration: $transition_time;
-        }
 
-        .breakTime_color {
-            color: $color_blue_middle;
-            transition-duration: $transition_time;
-        }
     }
 }

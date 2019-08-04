@@ -80,6 +80,7 @@ export default {
         this.stopTimer() // Pause the Timer after break
         // this.sessionCounter++;
         this.breakStatus = true
+        // 當時間到的時候，將狀態發送出去
         this.$emit('breakStauting', this.breakStatus)
         this.title = 'Break time!'
         this.totalTime = this.breakLength * 60

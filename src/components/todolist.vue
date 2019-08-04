@@ -1,13 +1,20 @@
 <template lang="pug">
 #todolist.todolistDiv
-  .addArea
-    //- input.ipt(type='text', v-model='inputVaule', v-on='add' placeholder="ADD A NEW MISSION")
-    input.ipt(type='text', v-model='inputVaule', placeholder="ADD A NEW MISSION")
+  .addArea(:class='{ breakTime_color: breakStatus }')
+    input.ipt(
+      type='text',
+      v-model='inputVaule',
+      placeholder="ADD A NEW MISSION")
     i.material-icons.add(v-on:click='add') add
   .task
     li(v-for='(item, index) in items')
-        label.container(:for="gernerateId(index)" v-bind:class='{ complete:item.completed }') {{item.text}}
-            input(:id="gernerateId(index)" type='radio', v-model='item.completed')
+        label.container(
+          :for="gernerateId(index)"
+          :class='{ complete:item.completed, breakTime_color: breakStatus }') {{item.text}}
+            input(
+              :id="gernerateId(index)"
+              type='radio',
+              v-model='item.completed')
             span.checkmark(v-on:click='removeTodo(item)')
         //- i.material-icons(:class='{ breakTime_color: breakStatus }' ) play_circle_outline
         i.material-icons  play_circle_outline
@@ -29,6 +36,12 @@ var itemlist = [
   }
 ]
 export default {
+  props: {
+    breakStatus: {
+      type: Boolean,
+      default: false
+    }
+  },
   data () {
     return {
       items: itemlist,

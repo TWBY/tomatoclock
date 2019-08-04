@@ -18,12 +18,21 @@ body {
     display: flex;
 }
 
-#listClock {
+.listClock {
     @include size(830px, 800px);
     background-color: $color_red_light;
 }
 
-#functionchange {
+.breakTime_bg {
+    background-color: $color_blue_light;
+    transition-duration: $transition_time;
+}
+
+// .todo-list {
+//     z-index: -1;
+// }
+
+#function-change {
     @include size(450px, 800px);
     background-color: $color_blue_darken;
 }

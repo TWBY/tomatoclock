@@ -1,9 +1,9 @@
 <template lang="pug">
   div#app
-    div#listClock
-      todolist
+    div.listClock(:class='{ breakTime_bg: breakStatus }' )
+      todolist.todo-list(:break-status="breakStatus")
       pomodoroClock(@breakStauting="status")
-    div#functionchange
+    div#function-change
       functionchange
 </template>
 
@@ -21,17 +21,18 @@ export default {
   },
   data () {
     return {
-      breakstatus: null
-      // breakStatus: app.breakStatus
+      breakStatus: false
     }
   },
   methods: {
     status: function (statusing) {
-      this.breakstatus = statusing
+      console.log('statusing = ', statusing)
+      this.breakStatus = statusing
     }
   }
 }
 </script>
 
 <style lang="scss">
+@import "@/styles/home.scss";
 </style>
