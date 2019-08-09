@@ -1,0 +1,22 @@
+@import "./function";
+
+.functionList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include size(30px, 220px);
+    border: solid 1px #f24;
+
+    position: absolute;
+    right: 85px;
+    top: 48px;
+
+    .material-icons {
+        font-size: 36px;
+
+        span {
+            font-family: Roboto;
+            font-size: 16px
+        }
+    }
+}
