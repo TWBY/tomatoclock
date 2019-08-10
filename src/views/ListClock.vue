@@ -1,19 +1,20 @@
 <template lang="pug">
-  div#app
-    ListClock
-    div#function-change
-      FunctionChangeIcon
+
+div.listClock(:class='{ breakTime_bg: breakStatus }' )
+  TodoList.todo-list(:break-status="breakStatus")
+  pomodoroClock(@breakStauting="status")
+
 </template>
 
 <script>
-import ListClock from '@/views/ListClock.vue';
-import FunctionChangeIcon from '@/views/FunctionChangeIcon.vue';
+import TodoList from '@/views/TodoList.vue';
+import pomodoroClock from '@/views/Clock.vue';
 
 export default {
-  name: 'Home',
+  name: 'ListClock',
   components: {
-    ListClock,
-    FunctionChangeIcon
+    TodoList,
+    pomodoroClock
   },
   data () {
     return {

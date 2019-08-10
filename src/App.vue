@@ -4,25 +4,24 @@ html
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
     title Document
   body
-    //- Home
     #sideBar
       router-link(to='/') Home
-      hr
-      router-link(to='/list') List
-    transition(name="page" mode="out-in")
-      router-view(:key="$route.path")
-
+      | |
+      router-link(to='/edit') Edit
+    router-view
 </template>
 
 <script>
-import Home from '@/views/Home.vue'
+import Home from '@/views/Home.vue';
+import Edit from '@/views/Edit.vue';
 
 export default {
   name: 'App',
   components: {
-    Home
+    Home,
+    Edit
   }
-}
+};
 </script>
 
 <style lang="scss">

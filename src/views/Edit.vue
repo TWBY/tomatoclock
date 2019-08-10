@@ -1,19 +1,18 @@
 <template lang="pug">
-  div#app
-    ListClock
-    div#function-change
-      FunctionChangeIcon
+#edit
+    TodoList.todo-list
+    FunctionChangeText
 </template>
 
 <script>
-import ListClock from '@/views/ListClock.vue';
-import FunctionChangeIcon from '@/views/FunctionChangeIcon.vue';
+import TodoList from '@/views/TodoList.vue';
+import FunctionChangeText from '@/views/FunctionChangeText.vue';
 
 export default {
-  name: 'Home',
+  name: 'Edit',
   components: {
-    ListClock,
-    FunctionChangeIcon
+    TodoList,
+    FunctionChangeText
   },
   data () {
     return {
@@ -30,5 +29,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/home.scss";
+@import "@/styles/Edit.scss";
 </style>

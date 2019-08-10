@@ -34,7 +34,7 @@ var itemlist = [
     text: 'Learn something else',
     completed: false
   }
-]
+];
 export default {
   props: {
     breakStatus: {
@@ -47,29 +47,29 @@ export default {
       items: itemlist,
       inputVaule: ''
       // breakStatus: app.breakStatus
-    }
+    };
   },
 
   methods: {
     add: function () {
       if (this.inputVaule.length === 0) {
-        alert('Input is require，please enter again')
+        alert('Input is require，please enter again');
       } else {
         this.items.push({
           text: this.inputVaule,
           completed: false
-        })
-        this.inputVaule = ''
+        });
+        this.inputVaule = '';
       }
     },
     removeTodo: function (todo) {
-      this.items.splice(this.items.indexOf(todo), 1)
+      this.items.splice(this.items.indexOf(todo), 1);
     },
     gernerateId: function (index) {
-      return 'ID_' + index
+      return 'ID_' + index;
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
