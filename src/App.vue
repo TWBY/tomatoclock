@@ -7,9 +7,11 @@ html
     //- Home
     #sideBar
       router-link(to='/') Home
-      | |
+      hr
       router-link(to='/list') List
-    router-view
+    transition(name="page" mode="out-in")
+      router-view(:key="$route.path")
+
 </template>
 
 <script>
@@ -25,4 +27,13 @@ export default {
 
 <style lang="scss">
 // @import "@/styles/app.scss";
+.page-enter-active,
+.page-leave-active {
+  transition: 0.5s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
 </style>
