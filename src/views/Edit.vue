@@ -1,7 +1,8 @@
 <template lang="pug">
 #edit
-    TodoList.todo-list
     FunctionChangeText
+    transition(name="page" mode="out-in")
+      router-view
 </template>
 
 <script>
@@ -30,4 +31,14 @@ export default {
 
 <style lang="scss">
 @import "@/styles/Edit.scss";
+
+.page-enter-active,
+.page-leave-active {
+  transition: 0.5s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
 </style>

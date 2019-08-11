@@ -4,11 +4,8 @@ html
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
     title Document
   body
-    #sideBar
-      router-link(to='/') Home
-      | |
-      router-link(to='/edit') Edit
-    router-view
+    transition(name="page" mode="out-in")
+      router-view
 </template>
 
 <script>

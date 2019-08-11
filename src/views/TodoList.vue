@@ -1,5 +1,5 @@
 <template lang="pug">
-#todolist.todolistDiv
+#todolist.todoListDiv
   .addArea(:class='{ breakTime_color: breakStatus }')
     input.ipt(
       type='text',

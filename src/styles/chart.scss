@@ -1,0 +1,33 @@
+@import "./function";
+
+
+.chart {
+    border: solid 2px $color_white;
+    @include size(445px, 65%);
+
+    .focusTime,
+    .chartTable {
+        border: solid 2px $color_red_middle;
+        box-sizing: border-box;
+    }
+
+    .focusTime {
+        @include size(445px, 40%);
+    }
+
+    .chartTable {
+        @include size(445px, 60%);
+    }
+
+    .title {
+        font-size: 24px;
+        color: $color_white;
+        font-family: Roboto;
+        @include size(100%, auto);
+        background-color: $title_background-color;
+
+        padding: 10px
+    }
+
+
+}

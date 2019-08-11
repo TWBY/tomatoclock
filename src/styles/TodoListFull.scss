@@ -1,5 +1,6 @@
 @import "./function";
 
+
 .todoListDiv {
     // border: solid 1px blueviolet;
     @include size(445px, 100%);
@@ -45,38 +46,47 @@
 .breakTime_color {
     input {
         &::-webkit-input-placeholder {
-            color: $color_blue_middle;
+            color: #ff1744;
             transition-duration: $transition_time;
         }
     }
 
     .add {
-        color: $color_blue_middle;
+        color: #ff1744;
         transition-duration: $transition_time;
     }
 }
 
 
 .task {
-    @include size(445px, 114.5px);
-    // border: solid 1px black;
+    @include size(445px, auto);
+    border: solid 1px black;
     position: absolute;
-    // bottom: 76px;
-    bottom: 76px;
-    color: $color_red_middle;
+    // top: 180px;
+    // color: $color_white;
+
+    .todo,
+    .done {
+        border: solid 1px #d24;
+        @include size(100%, 250px);
+    }
+
+    // .done {
+    //     border: solid 1px rgb(156, 55, 15);
+    //     @include size(100%, 250px);
+    // }
 
     li {
         list-style-type: none;
-        // border: solid 1px #d24;
         padding-top: 3px;
         padding-bottom: 10px;
         margin-top: 9.25px;
         font-size: 16px;
 
         .container {
-            // border: solid 1px $color_blue_darken;
+            // border: solid 1px #ff1744;
             font-size: 16px;
-            color: $color_blue_darken;
+            color: $color_white;
             font-weight: bold;
             font-family: Roboto;
 
@@ -102,12 +112,12 @@
                 top: 0;
                 left: 0;
                 @include size(16px, 16px);
-                border: solid 1.5px $color_blue_darken;
+                border: solid 1.5px #ff1744;
                 border-radius: 50%;
             }
 
             &:hover input~.checkmark {
-                background-color: $color_blue_darken;
+                background-color: #ff1744;
             }
 
             /* Add a line */
@@ -125,7 +135,7 @@
 
         .material-icons {
             font-size: 20px;
-            color: $color_blue_darken;
+            color: #ff1744;
             right: 0px;
             position: absolute;
         }

@@ -18,7 +18,20 @@ export default new Router({
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ './views/Edit.vue')
+    component: () => import(/* webpackChunkName: "about" */ './views/Edit.vue'),
+    children: [{
+      path: 'List',
+      name: 'List',
+      component: () => import('./views/TodoListFull.vue')
+    }, {
+      path: 'Chart',
+      name: 'Chart',
+      component: () => import('./views/Chart.vue')
+    }, {
+      path: 'Music',
+      name: 'Music',
+      component: () => import('./views/Music.vue')
+    }]
   }
   ]
 });

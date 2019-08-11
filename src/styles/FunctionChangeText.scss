@@ -4,8 +4,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include size(30px, 220px);
-    border: solid 1px #f24;
+    @include size(30px, 300px);
+    // border: solid 1px #f24;
 
     position: absolute;
     right: 85px;
